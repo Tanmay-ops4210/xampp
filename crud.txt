@@ -1,0 +1,28 @@
+@PUT
+@Consumes(MediaType.APPLICATION_XML)
+@Path("/ExecuteQuery")
+public String executeMyquery(String query)
+{
+try
+{
+Class.forName("com.mysql.jdbc.Driver");
+
+String url = "jdbc:mysql://localhost/prac1";
+
+Connection con = DriverManager.getConnection(url,"root","root");
+
+Statement st = con.createStatement();
+
+st.execute(query);
+
+st.close();
+con.close();
+
+return "Query is Executed!!!";
+}
+
+catch(Exception e)
+{
+return e.getMessage();
+}
+}
