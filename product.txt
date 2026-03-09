@@ -1,0 +1,38 @@
+create database productdb;
+
+use productdb;
+
+create table product(
+Product_Name varchar(50),
+Quantity int,
+Expiry_date date
+);
+
+show tables;
+desc product;
+select * from product;
+
+
+
+
+insert into product values('Milk',50,'2026-12-01');
+
+insert into product values('Bread',30,'2026-10-15');
+
+insert into product values('Butter',20,'2027-01-20');
+
+
+select * from product;
+
+
+
+update product
+set Quantity=40
+where Product_Name='Bread';
+
+
+delete from product
+where Product_Name='Milk';
+
+
+http://localhost:8080/"Project name"/webresources/product/execute?query=insert%20into%20product%20values('Milk',50,'2026-12-01')
