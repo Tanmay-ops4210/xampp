@@ -1,0 +1,38 @@
+create database playerdb;
+
+use playerdb;
+
+create table player(
+Player_Name varchar(50),
+Age int,
+Country varchar(50),
+Runs int
+);
+
+show tables;
+desc player;
+select * from player;
+
+
+
+insert into player values('Virat',35,'India',26000);
+
+insert into player values('Root',33,'England',19000);
+
+insert into player values('Smith',34,'Australia',20000);
+
+
+
+select * from player;
+
+
+update player
+set Runs = 27000
+where Player_Name='Virat';
+
+
+delete from player
+where Player_Name='Smith';
+
+
+http://localhost:8080/"your project name"/webresources/player/execute?query=insert%20into%20player%20values('Virat',35,'India',26000)
