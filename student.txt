@@ -1,0 +1,41 @@
+create database studentdb;
+use studentdb;
+
+create table student(
+Student_Name varchar(50),
+Age int,
+Phone_No varchar(15),
+Subject varchar(50)
+);
+
+show tables;
+desc student;
+select * from student;
+
+
+
+in web
+
+insert into student values('Rahul',20,'9876543210','Math');
+
+
+insert into student values('Amit',22,'9876543211','Science');
+
+insert into student values('Priya',21,'9876543212','Computer');
+
+insert into student values('Neha',23,'9876543213','Physics');
+
+
+select * from student;
+
+
+update student
+set Subject='Physics'
+where Student_Name='Rahul';
+
+
+delete from student
+where Student_Name='Neha';
+
+
+http://localhost:8080/StudentCRUDWebApp/webresources/student/execute?query=insert%20into%20student%20values('Rahul',20,'9876543210','Math')
