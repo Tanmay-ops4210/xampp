@@ -1,0 +1,45 @@
+create database employeedb;
+
+use employeedb;
+
+create table employee(
+Employee_Name varchar(50),
+Age int,
+Phone_No varchar(15),
+Department varchar(50)
+);
+
+show tables;
+desc employee;
+select * from employee;
+
+
+
+insert into employee values('Rahul',25,'9876543210','IT');
+
+insert into employee values('Amit',28,'9876543211','HR');
+
+insert into employee values('Priya',26,'9876543212','Finance');
+
+insert into employee values('Neha',24,'9876543213','Marketing');
+
+
+select * from employee;
+
+
+update employee 
+set Department='IT' 
+where Employee_Name='Amit';
+
+
+select * from employee;
+
+
+delete from employee 
+where Employee_Name='Neha';
+
+
+select * from employee;
+
+
+http://localhost:8080/StudentCRUDWebApp/webresources/employee/execute?query=select%20*%20from%20employee
